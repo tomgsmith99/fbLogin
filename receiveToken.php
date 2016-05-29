@@ -6,7 +6,7 @@ if ($_GET["code"]){
 
 	$code = $_GET["code"];
 
-	$output .= "<p>Received token.</p>";
+	$output .= "<p>Received token!</p>";
 
 	$output .= "<p>The token is: " . $code;
 
