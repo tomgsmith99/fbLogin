@@ -2,7 +2,7 @@
 
 $output = "";
 
-if ($_GET["code"]){
+if (!empty($_GET["code"])){
 
 	$code = $_GET["code"];
 
@@ -34,3 +34,5 @@ else {
 }
 
 echo $output;
+
+http://www.tomgsmith.com/facebook/receiveToken.php?#access_token=EAANLmHcEhz8BAK7BfmCe7ZA12z3MfURZBs0TlGpBtGJIEhHXq9IZBUZBRpq0nkd4ZCZBLvox7TspZBZCNoZBCkxsjJIZCcFUZAaazUHPNZCgJmnntfLybQ1WmiYW8ZBIcRIOUJ2ZBurG210r189swBCy63yoORe5qPwqYg9XXhqjIgUWoZC8wZDZD&expires_in=5179
