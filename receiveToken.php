@@ -21,3 +21,5 @@ if (!empty($_GET["#access_token"])) {
 	$output .= "<p>The access_token is: " . $access_token;
 	$output .= "<p>Expires in: " . $expires_in;
 }
+
+echo $output;
