@@ -30,4 +30,13 @@ if (!empty($_GET["#access_token"])) {
 	$output .= "<p>Expires in: " . $expires_in;
 }
 
+
+// GET https://graph.facebook.com/v2.3/oauth/access_token?
+//     client_id={app-id}
+//    &redirect_uri={redirect-uri}
+//    &client_secret={app-secret}
+//    &code={code-parameter}
+
+$output .= "Click <a href='https://graph.facebook.com/v2.3/oauth/access_token?client_id=927543134029631&redirect_uri=http://www.tomgsmith.com/facebook/receiveToken.php&client_secret=108b9328c3ecbc0abfbadd3761b58217&code=" . $code . "'>here to exchange the access code for an access token.";
+
 echo $output;
