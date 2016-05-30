@@ -2,7 +2,7 @@
 
 $output = "";
 
-echo "<p>the access token is: " $_GET["#access_token"];
+echo "<p>the access token is: " . $_GET["#access_token"];
 
 if (!empty($_GET["code"])){
 
