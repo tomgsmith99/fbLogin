@@ -13,8 +13,11 @@ $options["default"]["desc"] = "Only the client_id and redirect_uri are required.
 
 $state = random_bytes(9);
 
-$options["state"]["url"] = $url . "?state=" . $state;
+$options["state"]["url"] = $url . "&state=" . $state;
 $options["state"]["desc"] = "Include a value for state, to prevent CSRF.";
+
+$options["token"]["url"] = $url . "&response_type=token";
+$options["token"]["desc"] = "Get a token instead of a code.";
 
 foreach($options as $name=>$opts) {
 	$link = "<a href = '" . $opts["url"] . "'>";
