@@ -20,10 +20,10 @@ if ($_GET["code"]){
 
 		$output .= "<p>The response_type is: " . $response_type;
 	}
-	if ($_GET["token"]) {
-		$token = $_GET["token"];
+	if ($_GET["access_token"]) {
+		$access_token = $_GET["access_token"];
 
-		$output .= "<p>The code is: " . $token;
+		$output .= "<p>The access_token is: " . $access_token;
 	}
 
 }
