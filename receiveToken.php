@@ -2,13 +2,13 @@
 
 $output = "";
 
-$getArray = print_r($_GET, TRUE);
+// $getArray = print_r($_GET, TRUE);
 
-echo $getArray;
+// echo $getArray;
 
-print_r($getArray); 
+// print_r($getArray); 
 
-echo "<p>the access token is: " . $_GET["#access_token"];
+// echo "<p>the access token is: " . $_GET["#access_token"];
 
 if (!empty($_GET["code"])){
 
