@@ -4,7 +4,9 @@ $output = "";
 
 $getArray = print_r($_GET, TRUE);
 
-echo $getArray; 
+echo $getArray;
+
+print_r($getArray); 
 
 echo "<p>the access token is: " . $_GET["#access_token"];
 
