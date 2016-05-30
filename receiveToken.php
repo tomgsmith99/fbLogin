@@ -6,9 +6,16 @@ if ($_GET["code"]){
 
 	$code = $_GET["code"];
 
-	$output .= "<p>Received token!</p>";
+	$output .= "<p>Handshake with Facebook was successful.</p>";
 
 	$output .= "<p>The token is: " . $code;
+
+	if ($_GET["state"]) {
+		$state = $_GET["state"];
+
+		$output .= "<p>The state is: " . $state;
+
+	}
 
 }
 

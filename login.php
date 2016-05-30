@@ -11,6 +11,11 @@ $url = "https://www.facebook.com/dialog/oauth?client_id=927543134029631&redirect
 $options["default"]["url"] = $url;
 $options["default"]["desc"] = "Only the client_id and redirect_uri are required. Only a code is passed to the redirect_uri (equivalent to passing response_type=code)";
 
+$state = random_bytes(9);
+
+$options["state"]["url"] = $url . "?state=" . $state;
+$options["state"]["desc"] = "Include a value for state, to prevent CSRF.";
+
 foreach($options as $name=>$opts) {
 	$link = "<a href = '" . $opts["url"] . "'>";
 
