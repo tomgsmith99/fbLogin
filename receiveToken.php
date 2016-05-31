@@ -48,7 +48,7 @@ $result = curl_exec($curl);
 
 $output .= "<p>the curl result is: " . $result;
 
-$resultArray = json_decode($result);
+$resultArray = json_decode($result, TRUE);
 
 print_r($resultArray);
 
