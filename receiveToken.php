@@ -51,6 +51,13 @@ $accessToken = $resultArray["access_token"];
 
 $output .= "<p>The access token is: " . $accessToken;
 
+$fbGraphURL = "https://graph.facebook.com/me?access_token=" . $accessToken;
+
+$response = file_get_contents($fbGraphURL);
+
+$output .= "<p>" . $response;
+
+// $response = json_decode($response, TRUE);
 
 // GET https://graph.facebook.com/v2.3/oauth/access_token?
 //     client_id={app-id}
