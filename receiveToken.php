@@ -50,7 +50,7 @@ $result = curl_exec($curl);
 
 $resultArray = json_decode($result);
 
-$accessToken = $resultArray["access_token"];
+// $accessToken = $resultArray["access_token"];
 
 $output .= "<p>The access token is: " . $accessToken;
 
