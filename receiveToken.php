@@ -31,6 +31,24 @@ if (!empty($_GET["#access_token"])) {
 }
 
 
+$postFields = array();
+$postFields["client_id"] = "927543134029631";
+$postFields["client_secret"] = "108b9328c3ecbc0abfbadd3761b58217";
+$postFields["redirect_uri"] = "http://www.tomgsmith.com/facebook/receiveToken.php";
+$postFields["code"] = $code;
+
+$curl = curl_init();
+
+curl_setopt($curl, CURLOPT_URL, "https://graph.facebook.com/v2.3/oauth/access_token");
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl, CURLOPT_POST, count($postFields));
+curl_setopt($curl, CURLOPT_POSTFIELDS, $postFields);
+
+$result = curl_exec($curl);
+
+$output .= "<p>the curl result is: " . $result;
+
+
 // GET https://graph.facebook.com/v2.3/oauth/access_token?
 //     client_id={app-id}
 //    &redirect_uri={redirect-uri}
