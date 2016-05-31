@@ -30,7 +30,6 @@ if (!empty($_GET["#access_token"])) {
 	$output .= "<p>Expires in: " . $expires_in;
 }
 
-
 $postFields = array();
 $postFields["client_id"] = "927543134029631";
 $postFields["client_secret"] = "108b9328c3ecbc0abfbadd3761b58217";
@@ -46,11 +45,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $postFields);
 
 $result = curl_exec($curl);
 
-$output .= "<p>the curl result is: " . $result;
-
 $resultArray = json_decode($result, TRUE);
-
-print_r($resultArray);
 
 $accessToken = $resultArray["access_token"];
 
@@ -63,6 +58,6 @@ $output .= "<p>The access token is: " . $accessToken;
 //    &client_secret={app-secret}
 //    &code={code-parameter}
 
-$output .= "Click <a href='https://graph.facebook.com/v2.3/oauth/access_token?client_id=927543134029631&redirect_uri=http://www.tomgsmith.com/facebook/receiveToken.php&client_secret=108b9328c3ecbc0abfbadd3761b58217&code=" . $code . "'>here to exchange the access code for an access token.";
+// $output .= "Click <a href='https://graph.facebook.com/v2.3/oauth/access_token?client_id=927543134029631&redirect_uri=http://www.tomgsmith.com/facebook/receiveToken.php&client_secret=108b9328c3ecbc0abfbadd3761b58217&code=" . $code . "'>here to exchange the access code for an access token.";
 
 echo $output;
