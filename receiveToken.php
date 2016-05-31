@@ -46,7 +46,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $postFields);
 
 $result = curl_exec($curl);
 
-// $output .= "<p>the curl result is: " . $result;
+$output .= "<p>the curl result is: " . $result;
 
 $resultArray = json_decode($result);
 
