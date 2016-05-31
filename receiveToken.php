@@ -50,6 +50,8 @@ $output .= "<p>the curl result is: " . $result;
 
 $resultArray = json_decode($result);
 
+print_r($resultArray);
+
 // $accessToken = $resultArray["access_token"];
 
 $output .= "<p>The access token is: " . $accessToken;
