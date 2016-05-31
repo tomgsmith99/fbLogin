@@ -46,7 +46,13 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, $postFields);
 
 $result = curl_exec($curl);
 
-$output .= "<p>the curl result is: " . $result;
+// $output .= "<p>the curl result is: " . $result;
+
+$resultArray = json_decode($result);
+
+$accessToken = $resultArray["access_token"];
+
+$output .= "<p>The access token is: " . $accessToken;
 
 
 // GET https://graph.facebook.com/v2.3/oauth/access_token?
