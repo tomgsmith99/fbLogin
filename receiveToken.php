@@ -52,7 +52,7 @@ $resultArray = json_decode($result, TRUE);
 
 print_r($resultArray);
 
-// $accessToken = $resultArray["access_token"];
+$accessToken = $resultArray["access_token"];
 
 $output .= "<p>The access token is: " . $accessToken;
 
